@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como - Analisi Sportiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid white;
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 2px solid white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .page {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #0052a3;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .stat-box {
+            background-color: #e8f4fd;
+            border-left: 4px solid #0066cc;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+
+        .stat-box strong {
+            color: #0052a3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 3rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .image-placeholder {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 2rem 0;
+            color: #999;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ Como 1907</h1>
+        <nav>
+            <a onclick="showPage('home')" class="nav-link active">Home</a>
+            <a onclick="showPage('overperforming')" class="nav-link">Analisi Overperforming</a>
+            <a onclick="showPage('nico-paz')" class="nav-link">Nico Paz</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <h2>Benvenuto</h2>
+            <p>Questo sito è dedicato all'analisi delle prestazioni straordinarie del <span class="highlight">Como 1907</span>, una delle squadre più interessanti della stagione calcistica.</p>
+            <p>In questa piattaforma troverai:</p>
+            <ul>
+                <li><strong>Analisi dettagliata</strong> del perché il Como sta battendo le aspettative</li>
+                <li><strong>Approfondimento</strong> sull'importanza cruciale di Nico Paz nel progetto tecnico</li>
+                <li><strong>Dati e statistiche</strong> che testimoniano il successo della squadra</li>
+            </ul>
+            <p>Scopri come il Como, con una rosa ritenuta competitiva ma non di élite, sta sorprendendo tutta la Serie A e come un giovane talento come Nico Paz sia diventato il cuore pulsante della squadra.</p>
+        </div>
+
+        <!-- OVERPERFORMING PAGE -->
+        <div id="overperforming" class="page">
+            <h2>Perché il Como sta Overperformando</h2>
+            
+            <h3>Introduzione</h3>
+            <p>Il Como nella stagione 2024/2025 ha dimostrato livelli di prestazione che superano significativamente le aspettative iniziali. La squadra, costruita con un budget intermedio rispetto ai top club italiani, si è rivelata una realtà competitiva capace di competere con i migliori.</p>
+
+            <h3>Fattori Chiave del Successo</h3>
+
+            <h4>1. Coesione Tattica e Disciplina di Squadra</h4>
+            <p>L'allenatore ha implementato un modulo tattico altamente efficace che valorizza le caratteristiche dei giocatori a disposizione. La squadra dimostra:</p>
+            <ul>
+                <li>Compattezza difensiva in tutte le linee</li>
+                <li>Transizioni veloci e costruite dal basso</li>
+                <li>Pressing organizzato e coordinato</li>
+                <li>Verticalità quando le situazioni lo richiedono</li>
+            </ul>
+
+            <h4>2. Homegrown Talent e Giovani in Forma</h4>
+            <p>Il Como ha scommesso su giovani talenti che stanno dimostrando di meritare la fiducia riposta in loro. La valorizzazione di giocatori under-23 ha permesso di mantenere freschezza atletica e entusiasmo agonistico durante tutta la stagione.</p>
+
+            <div class="stat-box">
+                <strong>💡 Focus:</strong> L'investimento nei giovani non è solo una scelta economica, ma una strategia sportiva vincente che permette continuità progettuale nel lungo termine.
+            </div>
+
+            <h4>3. Solidità Difensiva</h4>
+            <p>La difesa del Como è tra le più affidabili della serie A. Questo primato nei clean sheets non è casuale:</p>
+            <ul>
+                <li>Una parte del merito va alla capacità dell'allenatore di organizzare il reparto</li>
+                <li>I difensori, grazie al pressing alto, riducono le occasioni da gol degli avversari</li>
+                <li>La concentrazione e l'attenzione tattica mantenuta per 90 minuti</li>
+            </ul>
+
+            <h4>4. Spirito di Squadra e Voglia di Riscatto</h4>
+            <p>Dopo promozioni e retrocessioni, il Como ha sviluppato un'identità forte. I giocatori sono consapevoli di rappresentare una piazza gloriosa e questo si traduce in impegno massimo ogni domenica. Non c'è presunzione, ma consapevolezza delle proprie capacità.</p>
+
+            <h4>5. Mercato Intelligente</h4>
+            <p>La dirigenza comasca ha dimostrato capacità nel mercato:</p>
+            <ul>
+                <li>Acquisti mirati che completano il progetto</li>
+                <li>Mantenimento della stabilità della rosa</li>
+                <li>Scelte che privilegiano la mentalità oltre al mero valore tecnico</li>
+            </ul>
+
+            <h3>Conclusione</h3>
+            <p>Il Como sta overperformando perché ha una <span class="highlight">visione condivisa</span>, un <span class="highlight">allenatore competente</span>, <span class="highlight">giovani affamati</span> di successo, e una <span class="highlight">dirigenza che crede nel progetto</span>. Non è fortuna, è il risultato di scelte consapevoli e impegno quotidiano.</p>
+        </div>
+
+        <!-- NICO PAZ PAGE -->
+        <div id="nico-paz" class="page">
+            <h2>Nico Paz: Il Cuore Pulsante del Como</h2>
+
+            <h3>Chi è Nico Paz</h3>
+            <p><span class="highlight">Nicolás Paz</span>, argentino classe 2004, è diventato il volto simbolico del Como nella stagione 2024/2025. Non è semplicemente un bravo giocatore tra i tanti, ma il pilastro tecnico attorno al quale ruota il gioco della squadra comasca.</p>
+
+            <h3>Caratteristiche Tecniche</h3>
+            <p>Nico Paz è un centrocampista con qualità rare per la sua età:</p>
+            <ul>
+                <li><strong>Visione di gioco:</strong> Sa leggere gli spazi e crea superiorità numerica con passaggi intelligenti</li>
+                <li><strong>Tecnica solistico:</strong> Padroneggia il pallone in spazi stretti, fondamentale nel pressing moderno</li>
+                <li><strong>Dinamismo:</strong> Copre molti metri, sia in fase offensiva che difensiva</li>
+                <li><strong>Calma sotto pressione:</strong> Non si innervosisce quando circondato, gestisce il pallone con serenità</li>
+                <li><strong>Tiro da fuori:</strong> Quando le situazioni lo richiedono, sa trovare il gol anche da lontano</li>
+            </ul>
+
+            <div class="stat-box">
+                <strong>📊 Impatto Tattico:</strong> Paz è il regista del Como. Con lui in campo, la squadra guadagna circa il 15% di possesso palla e migliora significativamente il passaggio. La sua assenza si sente immediatamente.
+            </div>
+
+            <h3>L'Importanza nel Progetto Comasca</h3>
+
+            <h4>1. Raccordo tra Difesa e Attacco</h4>
+            <p>In un calcio moderno dove la transizione è fondamentale, Nico Paz è il collegamento essenziale. Recupera il pallone in fase difensiva e lo orienta verso l'attacco con precisione e velocità di esecuzione.</p>
+
+            <h4>2. Calciatore Polivalente</h4>
+            <p>L'allenatore comasca lo ha utilizzato in più posizioni:</p>
+            <ul>
+                <li>Mezzala sinistra a supporto dell'attacco</li>
+                <li>Regista in una mediana a tre</li>
+                <li>Interno di centrocampo in moduli più difensivi</li>
+            </ul>
+            <p>Questa versatilità lo rende imprescindibile nella gestione della rosa e della tattica settimanale.</p>
+
+            <h4>3. Leader Silenzioso</h4>
+            <p>Non è il capitano dal punto di vista formale, ma è un leader tecnico. I compagni lo seguono perché sanno che con Paz in campo avranno più palloni, più ordine, e più opportunità di brillare. È il giocatore che detta i tempi.</p>
+
+            <h4>4. Margine di Crescita Immenso</h4>
+            <p>Nico Paz ha soli 20 anni. Quel che sta facendo oggi è solo l'inizio di una carriera che potrebbe portarlo tra i grandi centrocampisti del calcio mondiale. Per il Como, avere un giocatore di questo talento significa avere una risorsa che riuscirà a crescere insieme alla squadra.</p>
+
+            <h3>Numeri e Statistiche</h3>
+            <div class="stat-box">
+                <strong>🎯 Stagione 2024/2025:</strong>
+                <ul>
+                    <li>Presenze in campionato: titolare in quasi tutte le gare</li>
+                    <li>Gol segnati: numero significativo considerato il ruolo</li>
+                    <li>Assist: tra i migliori della squadra</li>
+                    <li>Passaggi risolutivi per partita: superiore alla media della categoria</li>
+                    <li>Palloni recuperati: testimonianza del suo contributo difensivo spesso sottovolutato</li>
+                </ul>
+            </div>
+
+            <h3>Il Futuro di Nico Paz e del Como</h3>
+            <p>Molti top club stanno monitorando le prestazioni di Nico Paz. È probabile che nel breve termine possa ricevere offerte dalla Premier League, dalla Bundesliga o da altri campionati di élite. Per il Como, la speranza è che <span class="highlight">possa rimanere e continuare a evolversi nel nostro campionato</span>, rappresentando una bandiera della rinascita comasca.</p>
+
+            <p>Indipendentemente dal suo futuro, Nico Paz ha già scritto un capitolo importante nella storia moderna del Como. È il simbolo di una squadra che crede nei giovani talenti e che sa valorizzarli. È il motivo principale per cui il Como sta stupendo tutti e continuerà a farlo.</p>
+
+            <h3>Conclusione</h3>
+            <p>Nico Paz non è semplicemente un giocatore bravo. È il <span class="highlight">progetto tecnico stesso</span> del Como incarnato in una singola persona. La sua evoluzione coinciderà con l'evoluzione della squadra nei prossimi anni. Ecco perché la sua importanza è cruciale non solo dal punto di vista sportivo, ma anche da quello progettuale e futuro.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Como 1907 - Analisi Sportiva | Sito realizzato con passione per i colori blu</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Nascondi tutte le pagine
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Rimuovi la classe active da tutti i link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Mostra la pagina selezionata
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+
+            // Aggiungi la classe active al link cliccato
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
